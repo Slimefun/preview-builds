@@ -1,0 +1,3 @@
+{
+    "extends": ["@blobdevelopment/eslint-config"]
+}

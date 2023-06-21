@@ -1,0 +1,8 @@
+name = "preview-builds"
+main = "src/index.ts"
+compatibility_date = "2023-06-21"
+
+[[r2_buckets]]
+binding = "R2"
+bucket_name = "preview-builds"
+preview_bucket_name = "preview-builds"
