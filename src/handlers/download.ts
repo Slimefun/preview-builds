@@ -12,7 +12,7 @@ export async function handleDownload(ctx: Ctx): Promise<Response> {
 
 	const obj = await ctx.env.R2.get(path);
 	if (obj === null) {
-		return ctx.json({ error: 'Build not found!' });
+		return ctx.json({ error: 'Build not found!' }, 404);
 	}
 
 	const headers = new Headers();

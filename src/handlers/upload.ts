@@ -5,7 +5,7 @@ export async function handleUpload(ctx: Ctx): Promise<Response> {
 		return ctx.json({ error: 'No body provided!' }, 400);
 	}
 	const expectedHash = ctx.req.header('x-checksum');
-	if (expectedHash === null) {
+	if (expectedHash === undefined) {
 		return ctx.json({ error: 'Missing "x-checksum" header!' }, 400);
 	}
 
