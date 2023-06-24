@@ -1,7 +1,7 @@
 name = "preview-builds"
 main = "src/index.ts"
 compatibility_date = "2023-06-21"
-route = { pattern = "preview-builds.walshy.dev", zone_name = "walshy.dev" }
+route = { pattern = "preview-builds.walshy.dev/*", zone_name = "walshy.dev" }
 
 [[r2_buckets]]
 binding = "R2"
