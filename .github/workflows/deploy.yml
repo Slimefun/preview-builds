@@ -1,0 +1,26 @@
+name: Deploy
+
+on: push
+
+jobs:
+  test-and-deploy:
+    name: Test & Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup node
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install
+      run: npm ci
+
+    - name: Test
+      run: npm run test
+
+    - name: Deploy
+      run: npm run deploy
+      env:
+        CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
